@@ -1,0 +1,10 @@
+List <Employee> employee = new ArrayList<>();
+
+employee.add(new Employee(02, "Nick");
+employee.add(new Employee(04, "Audra");
+employee.add(new Employee(06, "Miles");
+employee.add(new Employee(08, "Luke");
+
+Collections.sort(employee, Comparator.comparing(employee->employee.id));
+
+employees.forEach(Employee e) -> System.out.println(e.name + " " + e.id));
