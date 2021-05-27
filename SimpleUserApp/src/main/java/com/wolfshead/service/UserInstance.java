@@ -14,14 +14,14 @@ public class UserInstance {
 		User user = new User();
 		try {
 			PreparedStatement pst = DbConnection.getConnection().prepareStatement(query);
-
+			pst.setString(1, username);
 			ResultSet rs = pst.executeQuery();
-
+			
 			while (rs.next()) {
 				user.setId(rs.getInt("id"));
 				user.setFirstName(rs.getString("firstName"));
-				user.setUsername(username);
 				user.setLastName(rs.getString("lastName"));
+				user.setUsername(username);
 				user.setRole(rs.getString("role"));
 			}
 

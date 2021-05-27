@@ -1,7 +1,7 @@
 package com.wolfshead.service;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
 import com.wolfshead.db.DbConnection;
 import com.wolfshead.vo.User;
@@ -9,11 +9,18 @@ import com.wolfshead.vo.User;
 public class UpdateService {
 
 	public static boolean updateUser(User user) {
+		
+		String query = "UPDATE user SET id = ?, firstName = ?, lastName = ?, roll = ? "
+				+ "WHERE username = ?";
 		try {
-			Statement st = DbConnection.getConnection().createStatement();
-
-			ResultSet rs = st.executeQuery(
-					"UPDATE user SET id = id, firstName = firstName, lastName = lastName, roll = roll WHERE username = username");
+			PreparedStatement pst = DbConnection.getConnection().prepareStatement(query);
+			pst.setInt(1, user.getId());			
+			pst.setString(2, user.getFirstName());
+			pst.setString(3, user.getLastName());
+			pst.setString(4, user.getRole());
+			pst.setString(5, user.getUsername());
+			
+			ResultSet rs = pst.executeQuery();
 
 			if (rs.getBoolean(1)) {
 				System.out.println("The user was updated.");

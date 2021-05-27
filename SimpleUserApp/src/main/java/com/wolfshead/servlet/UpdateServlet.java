@@ -13,7 +13,7 @@ import com.wolfshead.service.UserInstance;
 import com.wolfshead.vo.User;
 
 //PUT || UPDATE
-@WebServlet("/update")
+@WebServlet("/SimpleUserApp/update")
 public class UpdateServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -31,6 +31,8 @@ public class UpdateServlet extends HttpServlet {
 		boolean didItWork = UpdateService.updateUser(user);
 		if (didItWork) {
 			System.out.println("${username} Updated");
+		} else {
+			System.out.println("DidItWork came back false");
 		}
 	}
 

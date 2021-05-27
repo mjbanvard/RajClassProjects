@@ -11,13 +11,6 @@
 <body>
 
 <h1>User Login</h1>
-<p>
-<%  Object error = request.getAttribute("message");
-	if (error != null){
-	out.println(error);
-	}
-	%></p>
-	<br />
 
 <form action="/SimpleUserApp/login" method="get">
 <table>
@@ -32,6 +25,15 @@
 </table>
 <input type="submit" value="Submit">
 </form>
+<p>
+<%  Object error = request.getAttribute("message");
+	if (error != null){
+	out.println(error);
+	}
+	%></p>
+	<br />
+
+
 
 </body>
 </html>

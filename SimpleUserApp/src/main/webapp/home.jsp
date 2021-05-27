@@ -33,6 +33,7 @@ This will be a static web page, displaying the User info.
       <TH>First Name</th>
       <TH>Last Name</th>
       <TH>Username</th>
+      <TH>Role</TH>
     </tr> 
       
         <tr>
@@ -40,7 +41,7 @@ This will be a static web page, displaying the User info.
           <td><c:out value="${user.firstName}" /></td>
           <td><c:out value="${user.lastName}" /></td>
           <td><c:out value="${user.username}" /></td>
-         
+          <td><c:out value="${user.role}" /></td>
         </tr>
       
     </table>

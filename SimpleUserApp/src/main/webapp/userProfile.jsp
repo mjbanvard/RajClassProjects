@@ -23,7 +23,7 @@
 	
  <h2>Do you really want to update <% out.println(username); %></h2>
  
- <form action="/update" method="put">
+ <form action="/SimpleUserApp/update" method="put">
    <table style="with: 80%">
     <tr>
      <td>First Name</td>
@@ -56,7 +56,7 @@
     
     </tr>
    </table>
-   <input type="reset" value="Cancel">
+   <input type="button" value="BackToAdmin" onclick="back">
    <input type="submit" value="Submit">
 </form>
 
