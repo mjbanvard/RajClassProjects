@@ -1,4 +1,4 @@
-package com.wolfshead.servlet;
+package com.wolfshead2.servlet;
 
 import java.io.IOException;
 
@@ -9,19 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.wolfshead.service.UserCheck;
+import com.wolfshead2.service.UserCheck;
+import com.wolfshead2.vo.User;
 
 /**
- * Servlet implementation class UserValid
+ * Servlet implementation class ValidServlet
  */
 @WebServlet("/validate")
-public class UserValid extends HttpServlet {
+public class ValidServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UserValid() {
+    public ValidServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,9 +35,12 @@ public class UserValid extends HttpServlet {
 
 		System.out.println("This is the user " + request.getAttribute("username"));
 		boolean isValidUser;
+
+		User user = new User();
+
 		try {
-			String username = "cdir";
-			isValidUser = new UserCheck().validateUser(username);
+			Object username = "cdir" /* request.getAttribute("username") */;
+			isValidUser = new UserCheck().validateUser((String) username);
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("getting attribute failed");
@@ -50,6 +54,7 @@ public class UserValid extends HttpServlet {
 			// link to good page
 			System.out.println("I got stuck here");
 			RequestDispatcher rd = request.getRequestDispatcher("userSuccess.jsp");
+			// rd.("userSuccess.jsp");
 			// rd.forward(request, response);
 			// rd.toString();
 		} else {

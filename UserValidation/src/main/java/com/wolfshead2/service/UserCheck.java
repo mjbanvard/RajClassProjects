@@ -1,9 +1,9 @@
-package com.wolfshead.service;
+package com.wolfshead2.service;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.wolfshead.db.DbConnection;
+import com.wolfshead2.db.DbConnection;
 
 public class UserCheck {
 

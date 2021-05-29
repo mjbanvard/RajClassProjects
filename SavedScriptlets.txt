@@ -1,0 +1,24 @@
+<!-- 		<% 
+			request.setAttribute("username", "username");
+			boolean isValidUser = new UserCheck().validateUser("username");
+		 %>
+		  -->
+
+<!-- <%		
+		// boolean isValidUser = new UserCheck().validateUser("username");
+		// URI goodUri = new URI("file:///C:/Users/13146/GxLearning/UserValidation/src/main/webapp/userSuccess.jsp");
+		// URI badUri = new URI("file:///C:/Users/13146/GxLearning/UserValidation/src/main/webapp/userFail.jsp");
+		
+		if (isValidUser) {
+			// link to good page
+			RequestDispatcher rd = request.getRequestDispatcher("../userSuccess.jsp");
+			rd.forward(request, response);
+			// rd.toString();
+		} else {
+			// link to bad page
+			RequestDispatcher rd = request.getRequestDispatcher("../userFail.jsp");
+			rd.forward(request, response);
+			//rd.toString();
+		}
+		 %>
+ -->

@@ -12,7 +12,7 @@
 
 <h1>User Login</h1>
 
-<form action="/SimpleUserApp/login" method="get">
+<form action="/SimpleUserApp/login" method="post">
 <table>
 	<tr>
 		<td>Username:</td>

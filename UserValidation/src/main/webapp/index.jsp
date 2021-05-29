@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %> 
-<%@ page import="com.wolfshead.vo.User" %>
-<%@ page import="com.wolfshead.service.UserCheck" %>
+<%@ page import="com.wolfshead2.vo.User" %>
+<%@ page import="com.wolfshead2.service.UserCheck" %>
 <%@ page import="java.net.URI" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -14,7 +14,7 @@
 
 <h1>User Login</h1>
 
-<form action="validate" method="post">
+<form action="/validate" method="get">
 
 <table>
 	<tr>

@@ -1,4 +1,4 @@
-package com.wolfshead.db;
+package com.wolfshead2.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

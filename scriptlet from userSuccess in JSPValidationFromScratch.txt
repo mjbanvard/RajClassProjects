@@ -1,0 +1,16 @@
+<%
+	String uName = (String)request.getParameter("username");
+	UserVO user = UserService.createUser(uName);
+	//out.println(user.toString());
+	//out.println("User ID = " + user.getId());
+	//out.println("User Name = " + user.getFirstName() + " " + user.getLastName());
+	//out.println("User Role = " + user.getRole()); 
+	
+	%>
+ <h2>Welcome home, <c:out value="${user.getFirstName}"></c:out></h2>
+
+
+
+
+
+This will be a static web page, displaying the User info.

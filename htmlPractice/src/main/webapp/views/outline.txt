@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="../css/stylesheet.css" />
+</head>
+<body background="Scan_20170719(19).jpg">
+
+<h1 class="h1">Welcome to the home of the Banvard branch.</h1>
+
+
+<span><a href="home.html">Home</a></span>

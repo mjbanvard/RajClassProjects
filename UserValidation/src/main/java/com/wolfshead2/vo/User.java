@@ -1,4 +1,4 @@
-package com.wolfshead.vo;
+package com.wolfshead2.vo;
 
 public class User {
 

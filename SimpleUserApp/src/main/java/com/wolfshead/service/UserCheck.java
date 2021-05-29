@@ -9,7 +9,6 @@ public class UserCheck {
 
 	String pwQuery = ("SELECT password FROM user WHERE username = ?");
 
-
 	public boolean validatePassword(String username, String password) {
 		try {
 			PreparedStatement pst = DbConnection.getConnection().prepareStatement(pwQuery);

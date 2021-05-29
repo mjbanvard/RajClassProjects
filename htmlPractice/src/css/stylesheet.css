@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+.h1{
+	align:center;
+	color:blue;
+}
+
+.textTraights{
+	color:cyan;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.textBox{
+	border: 10px;
+	border-color: red;
+	font-size: 50px
+}
+
+.noodles{
+	font: italic;
+	font-family: Verdana, cursive
+}
