@@ -4,16 +4,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Error in Login</title>
+<title>Contact Us</title>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<h1>ERROR</h1>
 
-
-
-<a href="index.jsp">Return to Login Page</a>
+<h1>In order to form a more perfect Union</h1>
 
 <jsp:include page="footer.jsp"></jsp:include>
+
+
 </body>
 </html>

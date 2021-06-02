@@ -11,12 +11,14 @@
 <title>User Validated</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
+
 
 <h1>SUCCESS</h1>
 
-<jsp:useBean id="user" class="com.galaxe.jspfs.vo.UserVO"></jsp:useBean>
+<jsp:useBean id="user" class="com.classroom.domain.Employee"></jsp:useBean>
 
-<% String uName = (String)request.getParameter("username"); %>
+<% String uName = (String)session.getAttribute("username"); %>
 <sql:setDataSource
         var="myDB"
         driver="com.mysql.cj.jdbc.Driver"
@@ -25,31 +27,30 @@
         password="root%recipe5"
     />
      
-    <sql:query var="user"   dataSource="${myDB}">
-        SELECT * FROM user WHERE username = "${uName}";
+    <sql:query var="userRS"   dataSource="${myDB}">
+        SELECT * FROM user
     </sql:query>
     
  <table border="1">
    <tr>
-      <TH>User Id</th>
       <TH>First Name</th>
       <TH>Last Name</th>
       <TH>Username</th>
-      <TH>Role</TH>
+      <TH>E-mail</TH>
     </tr> 
-      
+
+	<c:forEach var="user" items="${userRS.rows}">
         <tr>
-          <td><c:out value="${user.getId}" /></td>
           <td><c:out value="${user.firstName}" /></td>
           <td><c:out value="${user.lastName}" /></td>
           <td><c:out value="${user.username}" /></td>
-          <td><c:out value="${user.role}" /></td>
+          <td><c:out value="${user.email}" /></td>
         </tr>
-      
+    </c:forEach>
     </table>
 
 
-
+<jsp:include page="footer.jsp"></jsp:include>
 
 </body>
 </html>
