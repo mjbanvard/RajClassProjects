@@ -18,7 +18,7 @@ public class DbConnection {
 			con = DriverManager.getConnection(url, user, password);
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Can't resolve the class.");
+			System.out.println("Issue with getting Connection.");
 		}
 
 		return con;
@@ -30,7 +30,7 @@ public class DbConnection {
 				con.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
-				System.out.println("Issue in connection closing.");
+				System.out.println("Issue in Connection closing.");
 			}
 		}
 	}

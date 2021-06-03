@@ -18,7 +18,7 @@ public class LoginValidation {
 
 			while (rs.next()) {
 				String pwValue = rs.getString(1);
-				if (pword.contains(pwValue)) {
+				if (pword.equalsIgnoreCase(pwValue)) {
 					yesTheyAre = true;
 				}
 			}

@@ -14,6 +14,8 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 	<h1>Patient Portal</h1>
+	
+	
 
 	<sql:setDataSource var="myDB" driver="com.mysql.cj.jdbc.Driver"
 		url="jdbc:mysql://localhost:3306/jdbc_practice" user="recipe_user"
