@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ page import="com.classroom.service.LoginValidation" %>
-    
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="com.classroom.service.LoginValidation"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<%
+	<%
 	String dest;
 	LoginValidation lv = new LoginValidation();
 	String username = (String)request.getParameter("userName");
@@ -30,6 +30,6 @@
 
 %>
 
-<jsp:forward page = "<%= dest %>"></jsp:forward>
+	<jsp:forward page="<%= dest %>"></jsp:forward>
 </body>
 </html>

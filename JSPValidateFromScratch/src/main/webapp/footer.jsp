@@ -8,10 +8,10 @@
 </head>
 <body>
 
-	<table style="width: 100%; border: 1px" >
+	<table style="width: 100%" border="1" >
 	<tr>
-	<td><a href="userReg.jsp">Register</a></td>
-	<td><a href="logout.jsp">Cancel</a></td>
+	<td align="center"><a href="userReg.jsp">Register</a></td>
+	<td align="center"><a href="logout.jsp">Cancel</a></td>
 	</tr>
 	
 	</table>

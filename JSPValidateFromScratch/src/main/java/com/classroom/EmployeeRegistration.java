@@ -34,7 +34,7 @@ public class EmployeeRegistration extends HttpServlet {
 
 		System.out.println(emp.toString());
 
-		boolean result = new EmployeeService().saveEmployee(emp); // Returns false on success '?!?'
+		boolean result = new EmployeeService().saveEmployee(emp);
 		System.out.println(result);
 		if (result) {
 			// success

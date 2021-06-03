@@ -15,27 +15,15 @@ public class LoginValidation {
 		try {
 			Statement st = DbConnection.getConnection().createStatement();
 			ResultSet rs = st.executeQuery(query);
-			System.out.println("Am I in validation? Yes, just about got the result set.");
-			System.out.println(rs.getFetchSize());
-//			if (rs.next()) {
-//				System.out.println(rs.getString(1));
-//			}
 
 			while (rs.next()) {
-
 				String pwValue = rs.getString(1);
-				System.out.println(pwValue);
-				if (pword.contains(pwValue)) /* == (String) rs.getString(1)) */ {
-//					System.out.println();
-//					user = UserService.createUser(username);
-//					RequestAttribute request.setAttribute("user", user);
-					System.out.println("Yup, it's real");
+				if (pword.contains(pwValue)) {
 					yesTheyAre = true;
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Oops, in LoginValidation");
 		} finally {
 			DbConnection.closeConnection();
 		}
